@@ -1,0 +1,3 @@
+Before running the experiments, data and model checkpoint have to be downloaded. 
+Follow the setup described here: https://github.com/fmcarlucci/JigenDG/blob/master/README.md
+
