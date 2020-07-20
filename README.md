@@ -5,5 +5,10 @@ The InvariantRiskMinimization is modified from https://github.com/facebookresear
 
 Each folder contains its own README.md
 
+To produce Figure 5 (toy heteroskedastic data):
+```
+python discrete_example.py
+```
+
 
 
