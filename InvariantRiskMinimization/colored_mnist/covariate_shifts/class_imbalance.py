@@ -107,7 +107,7 @@ for restart in range(flags.n_restarts):
       return (a-b).abs() # Assumes both inputs are either 0 or 1
     # 2x subsample for computational convenience
     images = images.reshape((-1, 28, 28))[:, ::2, ::2]
-    # Assign a binary label based on the digit; flip label with probability 0.25
+    # Assign a binary label based on the digit
     labels = (labels < 5).float()
 
     label0_indices = (labels == 0).nonzero().squeeze()
@@ -118,7 +118,7 @@ for restart in range(flags.n_restarts):
     images = images[indices]
     labels = labels[indices]
 
-
+    # flip label with probability 0.25
     labels = torch_xor(labels, torch_bernoulli(.25, len(labels)))
     # Assign a color based on the label; flip the color with probability e
     colors = torch_xor(labels, torch_bernoulli(e, len(labels)))
